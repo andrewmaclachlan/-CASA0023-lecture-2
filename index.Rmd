@@ -333,7 +333,7 @@ knitr::include_graphics('img/lena-river.jpg')
 
 ```{r echo=TRUE, out.width='100%', fig.align='center', eval=FALSE}
 {r echo=FALSE, out.width='60%', fig.align='center'}
-knitr::include_graphics('img/lena-river.jpg')
+knitr::include_graphics('img/Lena-river.jpg')
 ```
 ---
 # Images 3
@@ -347,7 +347,7 @@ knitr::include_graphics('img/lena-river.jpg')
 
 .pull-left[
 ```{r echo=FALSE, out.width='50%', fig.align='center'}
-knitr::include_graphics('img/lena-river.jpg')
+knitr::include_graphics('img/Lena-river.jpg')
 ```
 
 .small[The Lena River, some 2,800 miles long, is one of the largest rivers in the world. Source:[ Original from NASA. Digitally enhanced by rawpixel](https://www.rawpixel.com/image/440230/free-photo-image-nasa-russia-earth)
@@ -397,6 +397,8 @@ As you scroll through the slides the viewer tab updates with the slide you are o
 knitr::include_graphics('img/moon_reader.gif')
 ```
 
+.small[The Ultimate Infinite Moon Reader for xaringan Slides. Source:[ Yihui Xie ](https://yihui.org/en/2019/02/ultimate-inf-mr/)
+]
 ---
 # Use Git
 
@@ -448,11 +450,16 @@ knitr::include_graphics('img/gitignore.jpg')
   * Then use the code provided in the shell for your project that has git enabled 
   * "...or push an existing repository from the command line"
   * Let's you call the repo something other than your RProject name....
-  
-  
+  * to do this you must **first** have commited some files to your git already. 
 
+1. To "deploy" the presentation on GitHub pages
+  * `usethis::use_github_pages(branch = "main")` OR
+  * On GitHub repo > settings > Pages > select source as main > Save
+  
 ---
 # Themes 
+
+* Xaringan can be styled using Cascading Style Sheets (CSS)
 
 
 ---

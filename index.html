@@ -32,7 +32,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e2107cf08055443bb4778421485fc1be","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e527e34ff8b8439394f7e59038cc42c9","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -164,7 +164,7 @@ top:1em;right:1em;
 
 # Xaringan 
 
-* 🗣 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
+* 🙊 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
 
 * Created by Yihui Xie....also created Bookdown...
 
@@ -379,7 +379,7 @@ Common code chunk options
 
 ```r
 {r echo=FALSE, out.width='60%', fig.align='center'}
-knitr::include_graphics('img/lena-river.jpg')
+knitr::include_graphics('img/Lena-river.jpg')
 ```
 ---
 # Images 3
@@ -393,7 +393,7 @@ knitr::include_graphics('img/lena-river.jpg')
 * You can use `\(.pull-left[]\)` and `\(.pull-right[]\)` with images too. 
 
 .pull-left[
-&lt;img src="img/lena-river.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/Lena-river.jpg" width="50%" style="display: block; margin: auto;" /&gt;
 
 .small[The Lena River, some 2,800 miles long, is one of the largest rivers in the world. Source:[ Original from NASA. Digitally enhanced by rawpixel](https://www.rawpixel.com/image/440230/free-photo-image-nasa-russia-earth)
 ]
@@ -538,6 +538,8 @@ As you scroll through the slides the viewer tab updates with the slide you are o
 # Live preview of slides
 &lt;img src="img/moon_reader.gif" width="75%" style="display: block; margin: auto;" /&gt;
 
+.small[The Ultimate Infinite Moon Reader for xaringan Slides. Source:[ Yihui Xie ](https://yihui.org/en/2019/02/ultimate-inf-mr/)
+]
 ---
 # Use Git
 
@@ -586,11 +588,16 @@ When you initialize git a .gitignore is created...
   * Then use the code provided in the shell for your project that has git enabled 
   * "...or push an existing repository from the command line"
   * Let's you call the repo something other than your RProject name....
-  
-  
+  * to do this you must **first** have commited some files to your git already. 
 
+1. To "deploy" the presentation on GitHub pages
+  * `usethis::use_github_pages(branch = "main")` OR
+  * On GitHub repo &gt; settings &gt; Pages &gt; select source as main &gt; Save
+  
 ---
 # Themes 
+
+* Xaringan can be styled using Cascading Style Sheets (CSS)
 
 
 ---
