@@ -7,7 +7,7 @@ output:
     css: ["custom.css", "default", "rladies", "rladies-fonts"]    
     lib_dir: libs
     includes:
-      in_header: header.html
+      in_header: [assets/header.html]
     nature:
       highlightStyle: github
       highlightLines: true
