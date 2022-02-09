@@ -130,6 +130,30 @@ knitr::include_graphics('img/Mariner-C Spacecraft Model.jpg')
 
 ---
 
+# Sessions this week
+
+* A bit different....
+
+### Today
+
+* 30 minutes of going through Xaringan
+* 30 minutes + homework of you creating a **small** 5 slide presentation
+* This will be part of the assessment this week
+
+--
+
+### Tomorrow
+
+* 30 minutes of going through bookdown
+* 1 hour creating a bookdown site
+* This forms the template for the main assessment component of the module
+
+--
+
+### By the end of the week you'll have an online portfolio! 
+
+---
+
 ```{r xaringan-logo, echo=FALSE}
 xaringanExtra::use_logo(
   image_url = "img/casa_logo.jpg"
@@ -530,6 +554,24 @@ knitr::include_graphics('img/examples.gif')
 class: inverse, center, middle
 
 # Keep it simple 
+---
+# Task
+
+30 minutes + homework of you creating a **small** 5 slide presentation
+
+* Select a sensor of your choice (any)
+* Create a short (maximum 5 slides) presentation on the sensor in xaringan
+* Things to consider
+  * Who runs the sensor
+  * What is the cost of the data 
+  * Where to source the data
+  * Resolutions (e.g. in a table)
+  * Applications of the data...with an example
+  * Images of the data (not required to download it)
+  * An example of the data being used within academic (or policy) literature 
+
+To start with get xaringan working first.
+
 ---
 
 
