@@ -153,6 +153,12 @@ knitr::include_graphics('img/Mariner-C Spacecraft Model.jpg')
 ### By the end of the week you'll have an online portfolio! 
 
 ---
+class: inverse, center, middle
+
+
+# A lot of the concepts covered today are the same for Bookdown, which we cover later in the week 
+
+---
 
 ```{r xaringan-logo, echo=FALSE}
 xaringanExtra::use_logo(
@@ -409,6 +415,11 @@ If you need to create a table....
 * wrangle anything you don't want
 
 * use the code on the previous slide to display it
+
+---
+
+# Citing 
+
 
 ---
 # Live preview of slides
