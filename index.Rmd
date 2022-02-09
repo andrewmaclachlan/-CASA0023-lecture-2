@@ -347,7 +347,7 @@ Remember then a new slide is starts with ...
 ...it's massive!...we need to remember code chunk options.... 
 
 ```{r echo=TRUE, out.width='50%', fig.align='center'}
-knitr::include_graphics('img/lena-river.jpg')
+knitr::include_graphics('img/Lena-river.jpg')
 ```
 
 ---
@@ -361,7 +361,7 @@ Common code chunk options
 * out.width= 'x%'
 
 ```{r echo=FALSE, out.width='30%', fig.align='center'}
-knitr::include_graphics('img/lena-river.jpg')
+knitr::include_graphics('img/Lena-river.jpg')
 ```
 
 .small[The Lena River, some 2,800 miles long, is one of the largest rivers in the world. Source:[ Original from NASA. Digitally enhanced by rawpixel](https://www.rawpixel.com/image/440230/free-photo-image-nasa-russia-earth)
@@ -581,7 +581,7 @@ class: inverse, center, middle
   * Images of the data (not required to download it)
   * An example of the data being used within academic (or policy) literature 
 
-To start with get xaringan working first.
+To start with get xaringan working.
 
 ---
 
