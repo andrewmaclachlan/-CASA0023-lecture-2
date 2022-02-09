@@ -13,6 +13,9 @@
     <script src="libs/tiny.toast/toast.min.js"></script>
     <link href="libs/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-broadcast/broadcast.js"></script>
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
     <script src="libs/fabric/fabric.min.js"></script>
     <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-scribble/scribble.js"></script>
@@ -21,9 +24,6 @@
     <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-search/search.js"></script>
     <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
-    <script src="libs/freezeframe/freezeframe.min.js"></script>
-    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
-    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
     <script src="libs/clipboard/clipboard.min.js"></script>
     <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
@@ -32,7 +32,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x0429ea78adb495e96c11b6dc9985c0a","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xb87d6a03bac474187ff2a07115eb5b0","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -592,15 +592,88 @@ When you initialize git a .gitignore is created...
 1. To "deploy" the presentation on GitHub pages
   * `usethis::use_github_pages(branch = "main")` OR
   * On GitHub repo &gt; settings &gt; Pages &gt; select source as main &gt; Save
+
+---
+class: inverse, center, title-slide, middle
+
+# For the presentation it's expected all group members will contribute on Git
+
+# Remember pushing and pulling?
   
 ---
 # Themes 
 
 * Xaringan can be styled using Cascading Style Sheets (CSS)
 
+* But there are many themes within the Xaringan itself 
 
+
+```r
+names(xaringan:::list_css())
+```
+
+```
+##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"    "default"         
+##  [5] "duke-blue"        "fc-fonts"         "fc"               "hygge-duke"      
+##  [9] "hygge"            "ki-fonts"         "ki"               "kunoichi"        
+## [13] "lucy-fonts"       "lucy"             "metropolis-fonts" "metropolis"      
+## [17] "middlebury-fonts" "middlebury"       "nhsr-fonts"       "nhsr"            
+## [21] "ninjutsu"         "rladies-fonts"    "rladies"          "robot-fonts"     
+## [25] "robot"            "rutgers-fonts"    "rutgers"          "shinobi"         
+## [29] "tamu-fonts"       "tamu"             "uio-fonts"        "uio"             
+## [33] "uo-fonts"         "uo"               "uol-fonts"        "uol"             
+## [37] "useR-fonts"       "useR"
+```
+---
+# Themes 2 
+
+
+```r
+---
+title: "Presentation Ninja"
+subtitle: "⚔&lt;br/&gt;with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+*   css: [default, metropolis, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```
 ---
 # Add ons
+
+[Garrick Aden-Buie](https://www.garrickadenbuie.com/) has many Xaringan extensions
+
+They are refreshingly easy to use:
+
+.pull-left[
+
+[xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/)
+
+* Search 
+* Clipboard
+* Tile view
+* Hover over code
+]
+
+.pull-right[
+[xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)
+
+&lt;img src="img/examples.gif" width="50%" style="display: block; margin: auto;" /&gt;
+.small[Source:[ xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)
+]
+]
+---
+class: inverse, center, middle
+
+# Keep it simple 
+---
 
 
     </textarea>

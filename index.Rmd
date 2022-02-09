@@ -22,7 +22,15 @@ library(countdown)
 library(xaringan)
 library(xaringanExtra)
 library(knitr)
+
+hook_source <- knitr::knit_hooks$get('source')
+knitr::knit_hooks$set(source = function(x, options) {
+  x <- stringr::str_replace(x, "^[[:blank:]]?([^*].+?)[[:blank:]]*#<<[[:blank:]]*$", "*\\1")
+  hook_source(x, options)
+})
+
 xaringanExtra::use_broadcast()
+xaringanExtra::use_freezeframe()
 xaringanExtra::use_scribble()
 #xaringanExtra::use_slide_tone()
 xaringanExtra::use_search(show_icon = TRUE)
@@ -454,14 +462,74 @@ knitr::include_graphics('img/gitignore.jpg')
 1. To "deploy" the presentation on GitHub pages
   * `usethis::use_github_pages(branch = "main")` OR
   * On GitHub repo > settings > Pages > select source as main > Save
+
+---
+class: inverse, center, title-slide, middle
+
+# For the presentation it's expected all group members will contribute on Git
+
+# Remember pushing and pulling?
   
 ---
 # Themes 
 
 * Xaringan can be styled using Cascading Style Sheets (CSS)
 
+* But there are many themes within the Xaringan itself 
 
+```{r, output=TRUE}
+names(xaringan:::list_css())
+```
+---
+# Themes 2 
+
+```{r, eval=FALSE}
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts] #<<
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```
 ---
 # Add ons
+
+[Garrick Aden-Buie](https://www.garrickadenbuie.com/) has many Xaringan extensions
+
+They are refreshingly easy to use:
+
+.pull-left[
+
+[xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/)
+
+* Search 
+* Clipboard
+* Tile view
+* Hover over code
+]
+
+.pull-right[
+[xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)
+
+```{r echo=FALSE, out.width='50%', fig.align='center'}
+knitr::include_graphics('img/examples.gif')
+```
+.small[Source:[ xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)
+]
+]
+---
+class: inverse, center, middle
+
+# Keep it simple 
+---
 
 
