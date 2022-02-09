@@ -308,10 +308,9 @@ Remember then a new slide is starts with ...
 
 ...it's massive!...we need to remember code chunk options.... 
 
-```{r echo=TRUE, out.width='100%', fig.align='center'}
+```{r echo=TRUE, out.width='50%', fig.align='center'}
 knitr::include_graphics('img/lena-river.jpg')
 ```
-
 
 ---
 
