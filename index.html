@@ -32,7 +32,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c798b947975a47f4be51b0d04d0f0b4e","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x5ad3661055b40518a8906eea97a8b91","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -595,33 +595,107 @@ If you need to create a table....
 
 # Citing
 
+A bit difficult in Xaringan, but Zotero can now continuously update your `.bib` file.
+
+To do so:
+
+.pull-left[
+1. Download the latest release --- the `.xpi` file: https://github.com/retorquere/zotero-better-bibtex/releases/tag/v5.2.108
+
+1. In Zotero &gt; Tools &gt; Add ons &gt; Extensions 
+
+1. Select the cog &gt; Install add on from file
+
+1. Select the `.xip` &gt; restart Zotero.
+
+On the restart select the default naming convention.
+
+]
+
+.pull-right[
+
+To export the library or collection
+
+1. File &gt; export or right click the collection and export
+
+1. Select Better BibLaTex
+
+1. Click keep updated
+
+1. Select the file to save into your Thesis project
+
+]
+---
+# Citing 2
+
+  * Install RefMangerR
 
 ```r
 remotes::install_github("ropensci/RefManageR")
 ```
 
+  * Add the following code near the top of your slides
 
 ```r
 library(RefManageR)
-BibOptions(
-check.entries = FALSE, 
-bib.style = "authoryear", 
-cite.style = "authoryear", 
-style = "markdown",
-hyperlink = FALSE, 
-dashed = FALSE)
-myBib = ReadBib("library.bib")
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = TRUE,
+           dashed = FALSE,
+           no.print.fields=c("doi", "url", "urldate", "issn"))
+myBib &lt;- ReadBib("./Bib.bib", check = FALSE)
 ```
 
+---
+
+# Citing 3
+
+  * load  `knitcitations`
 
 ```r
 library(knitcitations)
 ```
 
+  * Then use 
+
+```r
+`r Citet(myBib,"wulderOpeningArchiveHow2012")` or 
+`r Citep(myBib,"lovelandLandsatBuildingStrong2012")` or
+`r Citep(myBib,"lovelandLandsatBuildingStrong2012", "wulderOpeningArchiveHow2012")`
+```
+
+To create: 
+
+- [Wulder, Masek, Cohen et al. (2012)](#bib-wulderOpeningArchiveHow2012)
+- ([Loveland and Dwyer, 2012](#bib-lovelandLandsatBuildingStrong2012))
+
+- ([Loveland and Dwyer, 2012](#bib-lovelandLandsatBuildingStrong2012); [Wulder, Masek, Cohen et al., 2012](#bib-wulderOpeningArchiveHow2012))
+---
+
+# Citing 4
+
+Finally, to add a reference list use the following with the chunk with options `results='asis', echo=FALSE`
 
 
+```r
+PrintBibliography(myBib, start = 1, end = 7)
+```
 
+&lt;a
+name=bib-lovelandLandsatBuildingStrong2012&gt;&lt;/a&gt;[Loveland,
+T. R. and J. L.
+Dwyer](#cite-lovelandLandsatBuildingStrong2012) (2012).
+"Landsat: Building a Strong Future". In: _Remote Sensing
+of Environment_ 122, pp. 22-29.
 
+&lt;a name=bib-wulderOpeningArchiveHow2012&gt;&lt;/a&gt;[Wulder, M.
+A., J. G. Masek, W. B. Cohen, et
+al.](#cite-wulderOpeningArchiveHow2012) (2012). "Opening
+the Archive: How Free Data Has Enabled the Science and
+Monitoring Promise of Landsat". In: _Remote Sensing of
+Environment_ 122, pp. 2-10.
 ---
 # Live preview of slides
 
@@ -752,7 +826,7 @@ output:
 ---
 ```
 ---
-# Add ons
+# Add ons / useful resources
 
 [Garrick Aden-Buie](https://www.garrickadenbuie.com/) has many Xaringan extensions
 
@@ -775,6 +849,12 @@ They are refreshingly easy to use:
 .small[Source:[ xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)
 ]
 ]
+
+Resources:
+
+* [Sydney Xaringan theme](https://garthtarr.github.io/sydney_xaringan/#1)
+
+* [Alison Hill's Making slides in R Markdown](https://arm.rbind.io/slides/xaringan.html#1)
 ---
 class: inverse, center, middle
 
@@ -801,7 +881,7 @@ To start with get xaringan working.
 
 class: inverse, center, middle
 
-# 📖 bookdown..
+# 📖 bookdown.. &gt; Quarto 
 
 ---
 
@@ -1241,46 +1321,57 @@ Now the difficult files are out of the way.
 
 * You should recall the heading types `#` and `##`
 
-* So we can have: `# Introduction {#intro}`
+* So we can have: `# Introduction {#sec-introduction}`
 
-* To reference the title `[intro]` or `[Introduction]`
-
-* To reference the section number `\@ref(intro)`
+* To reference the section it's `@sec-introduction`
 
 --
 
 * A figure caption is set in the code chunk ...`nice-fig, fig.cap='Here is a nice figure!'`
 
-* Cross reference the number use the chunk name...` Figure \@ref(fig:nice-fig)`
+* Before the code use `#| label: fig-example`
 
-* A table `\@ref(tab:nice-tab)`
+* Then to reference figure in the text it's `@fig-example`
 
+* It's the same for tables but `#tbl-`
+
+* See [Quarto cross referencing](https://quarto.org/docs/authoring/cross-references.html) for more info
 ---
+
 # Equations
-
-Need to learn a bit of LaTex
-
 
 
 ```r
-\begin{equation} 
-  p= h\frac{c}{\varrho}
-  (\#eq:test)
-\end{equation} 
+p= h\frac{c}{\varrho}{#eq-example}
 ```
 
-p= h\frac{c}{\varrho} in $
+`$$p= h\frac{c}{\varrho}$$` 
+* Then to reference figure in the text it's `@eq-example`
 
-`$$p= h\frac{c}{\varrho}$$`
+---
 
-To reference this it's `\@ref(eq:test)`
+# Citing in Quarto 
 
+It's much easier:
+
+* Quarto should recognise your Zotero library and folders!
+* Change to visual model
+* Click Insert &gt; citation! It will add the citation to a local .bib
+
+This just adds the following...
+
+[`@xie2015`] giving (Xie 2015).
+
+If you remove the citation from the [] it will give Xie (2015).
+
+When citing multiple authors use a ; [@xie2015; @maclachlan2017urban] = (Xie 2015; MacLachlan et al. 2017)
+
+To remove the author add a minus sign `[-@maclachlan2017urban]` = (2017)
 ---
 
 class: inverse, center, middle
 
 # Do not do you analysis and thesis in the same R project. It's a **bad** idea
-
 
 ---
 
@@ -1288,21 +1379,21 @@ class: inverse, center, middle
 
 * Don't mess around with the file structure
 
-* No you can't have a folder of `.Rmds` for chapters
-
-1. Go to the `_bookdown.yml` file and make sue that that you have this line of code: `output_dir: docs` (it should be there)
-1. In the same file make sure your `book_filename` doesn't have any spaces use `-` or `_` e.g. `CASA-Thesis`
-1. Go to the `_output.yml` file and change the `edit` argument to `YOURREPO/edit/main/%s`, here it's `https://github.com/andrewmaclachlan/CASA-MSc-thesis/edit/main/%s`
+1. Go to the `_quarto.yml` file and make sue that that you have this line of code: `output_dir: docs` (it should be there)
 1. Build your book locally, close the preview window
 1. Save, stage changes, commit and then push to GitHub
 1. On your GitHub repository &gt; settings &gt; GitHub pages &gt; select the source as main and the folder as docs
-1. Make sure you build your `.pdf` and then your `gitbook` for the latest `.pdf` to be a download option on the website.
+1. Make sure you build your `gitbook`, if you don't and just save and commit it won't render online!
 
 ---
 
 # Final tips
 
 * If you are trying to make a complicated table or format a page a certain way....don't. It's much easier to accept the defaults and work around them to include the required information
+
+* In Quarto you can do all this in the visual editor! It makes it much easier.
+
+* Xaringan doesn't work with visual editor 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
