@@ -32,7 +32,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xb00f8920fe74247a6ea98b23b0e0233","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c798b947975a47f4be51b0d04d0f0b4e","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -111,10 +111,9 @@ class: inverse, center, middle
 
 # 1. Xaringan for group presentations*
 
-# 2. Bookdown for individual portofios 
+# 2. Quarto for individual portofios 
 
 ###* there will also be a short group contributions form to complete 
-
 ---
 
 # How to use the lectures
@@ -175,8 +174,8 @@ class: inverse, center, middle
 
 ### Tomorrow
 
-* 30 minutes of going through bookdown
-* 1 hour creating a bookdown site
+* 30 minutes of going through Quarto
+* 1 hour creating a Quarto site
 * This forms the template for the main assessment component of the module
 
 --
@@ -188,12 +187,12 @@ class: inverse, center, middle
 class: inverse, center, middle
 
 
-# 🗣 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
+# 🙊 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
 ---
 class: inverse, center, middle
 
 
-# A lot of the concepts covered today are the same for Bookdown, which we cover later in the week 
+# A lot of the concepts covered today are the same for Quarto, which we cover later in the week 
 
 ---
 
@@ -275,17 +274,19 @@ author: "Yihui Xie"
 institute: "RStudio, PBC"
 date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
-  xaringan::moon_reader:
-    lib_dir: libs
+  xaringan::moon_reader: # output format
+    lib_dir: libs #used for dependent libraries 
     nature:
-      highlightStyle: github
-      highlightLines: true
+      highlightStyle:  # how the code displays
+      highlightLines: true 
       countIncrementalSlides: false
+      #ratio "16:9" # or 4:3
 ---
 ```
-???
 
-highlight refers to how the code shows
+* [Highlight options](https://github.com/gnab/remark/wiki/Configuration): arta, ascetic, dark, default, far, github, googlecode, idea, ir-black, magula, monokai, rainbow, solarized-dark, solarized-light, sunburst, tomorrow, tomorrow-night-blue, tomorrow-night-bright, tomorrow-night, tomorrow-night-eighties, vs, zenburn.
+
+???
 
 ---
 
@@ -592,7 +593,31 @@ If you need to create a table....
 
 ---
 
-# Citing 
+# Citing
+
+
+```r
+remotes::install_github("ropensci/RefManageR")
+```
+
+
+```r
+library(RefManageR)
+BibOptions(
+check.entries = FALSE, 
+bib.style = "authoryear", 
+cite.style = "authoryear", 
+style = "markdown",
+hyperlink = FALSE, 
+dashed = FALSE)
+myBib = ReadBib("library.bib")
+```
+
+
+```r
+library(knitcitations)
+```
+
 
 
 
@@ -611,6 +636,7 @@ As you scroll through the slides the viewer tab updates with the slide you are o
 ---
 
 # Live preview of slides
+
 &lt;img src="img/moon_reader.gif" width="75%" style="display: block; margin: auto;" /&gt;
 
 .small[The Ultimate Infinite Moon Reader for xaringan Slides. Source:[ Yihui Xie ](https://yihui.org/en/2019/02/ultimate-inf-mr/)
@@ -689,17 +715,20 @@ names(xaringan:::list_css())
 ```
 
 ```
-##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"    "default"         
-##  [5] "duke-blue"        "fc-fonts"         "fc"               "glasgow_template"
-##  [9] "hygge-duke"       "hygge"            "ki-fonts"         "ki"              
-## [13] "kunoichi"         "lucy-fonts"       "lucy"             "metropolis-fonts"
-## [17] "metropolis"       "middlebury-fonts" "middlebury"       "nhsr-fonts"      
-## [21] "nhsr"             "ninjutsu"         "rladies-fonts"    "rladies"         
-## [25] "robot-fonts"      "robot"            "rutgers-fonts"    "rutgers"         
-## [29] "shinobi"          "tamu-fonts"       "tamu"             "uio-fonts"       
-## [33] "uio"              "uo-fonts"         "uo"               "uol-fonts"       
-## [37] "uol"              "useR-fonts"       "useR"             "uwm-fonts"       
-## [41] "uwm"
+##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
+##  [4] "default"          "duke-blue"        "fc-fonts"        
+##  [7] "fc"               "glasgow_template" "hygge-duke"      
+## [10] "hygge"            "ki-fonts"         "ki"              
+## [13] "kunoichi"         "lucy-fonts"       "lucy"            
+## [16] "metropolis-fonts" "metropolis"       "middlebury-fonts"
+## [19] "middlebury"       "nhsr-fonts"       "nhsr"            
+## [22] "ninjutsu"         "rladies-fonts"    "rladies"         
+## [25] "robot-fonts"      "robot"            "rutgers-fonts"   
+## [28] "rutgers"          "shinobi"          "tamu-fonts"      
+## [31] "tamu"             "uio-fonts"        "uio"             
+## [34] "uo-fonts"         "uo"               "uol-fonts"       
+## [37] "uol"              "useR-fonts"       "useR"            
+## [40] "uwm-fonts"        "uwm"
 ```
 ---
 # Themes 2 
