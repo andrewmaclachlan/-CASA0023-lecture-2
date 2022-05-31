@@ -677,20 +677,36 @@ class: inverse, center, middle
 ---
 # Task
 
-30 minutes + homework of you creating a **small** 5 slide presentation
+30 minutes + homework
 
-* Select a sensor of your choice (any)
-* Create a short (maximum 5 slides) presentation on the sensor in xaringan
-* Things to consider
-  * Who runs the sensor
-  * What is the cost of the data 
-  * Where to source the data
-  * Resolutions (e.g. in a table)
-  * Applications of the data...with an example
-  * Images of the data (not required to download it)
-  * An example of the data being used within academic (or policy) literature 
+Create a small 5 slide (maximum) presentation and host it on GitHub - place the link in your Quarto portfolio
+
+-   Select a sensor of your choice (any)
+-   Create a short (maximum 5 slides) presentation on the sensor in xaringan
+
+Things to consider:
+
+-   Who runs the sensor
+-   What is the cost of the data
+-   Where do you source the data
+-   Resolutions (e.g. in a table)
+-   Applications of the data...with an example
+-   Images of the data (not required to download it)
+-   An example of the data being used within academic (or policy) literature
 
 To start with get xaringan working.
+
+---
+
+class: inverse, center, middle
+
+# `r emo::ji("stop")` End of session 1
+
+---
+
+class: inverse, center, middle
+
+# `r emo::ji("bike")` Start of session 2
 
 ---
 
@@ -1061,6 +1077,9 @@ p= h\frac{c}{\varrho}{#eq-example}
 $$p= h\frac{c}{\varrho}$$ 
 * Then to reference figure in the text it's `@eq-example`
 
+You can also use $ to add a quick equation e.g. `$\rho$` gives $\rho$
+
+For more equation guidance consult [Mathematics in R Markdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html)
 ---
 
 # Citing in Quarto 
@@ -1107,3 +1126,21 @@ class: inverse, center, middle
 * In Quarto you can do all this in the visual editor! It makes it much easier.
 
 * Xaringan doesn't work with visual editor 
+
+---
+
+# Task
+
+30 minutes + homework
+
+For the individual assignment of the module you are required to produce a online portfolio of independent study and response questions. In the practical sessions this week you should have created your online portfolio and added your response from week 1 to it. For week 2 you must add the URL of your small 5 slide presentation and also write 1 paragraph on the following:
+
+-   Reflect on your experience using these reproducible presentation tools through considering the benefits and drawbacks.
+---
+
+class: inverse, center, middle
+
+# `r emo::ji("stop")` End of session 2
+
+
+

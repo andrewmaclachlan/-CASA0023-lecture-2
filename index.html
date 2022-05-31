@@ -32,7 +32,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x5ad3661055b40518a8906eea97a8b91","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x064a68c875946769f03d7e8e09cccc2","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -72,7 +72,7 @@ class: inverse, center, title-slide, middle
 
 ### Lecture 2: Portfolio tools: Xaringan and Quarto
 
-### 02/02/2022 (updated: 20/05/2022)
+### 02/02/2022 (updated: 31/05/2022)
 
 <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>[a.maclachlan@ucl.ac.uk](mailto:a.maclachlan@ucl.ac.uk)
 <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>[andymaclachlan](https://twitter.com/andymaclachlan)
@@ -187,7 +187,7 @@ class: inverse, center, middle
 class: inverse, center, middle
 
 
-# 🙊 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
+# 🗣 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
 ---
 class: inverse, center, middle
 
@@ -648,6 +648,10 @@ BibOptions(check.entries = FALSE,
 myBib &lt;- ReadBib("./Bib.bib", check = FALSE)
 ```
 
+```
+## Loading required namespace: bibtex
+```
+
 ---
 
 # Citing 3
@@ -668,8 +672,8 @@ library(knitcitations)
 
 To create: 
 
-- [Wulder, Masek, Cohen et al. (2012)](#bib-wulderOpeningArchiveHow2012)
-- ([Loveland and Dwyer, 2012](#bib-lovelandLandsatBuildingStrong2012))
+- &lt;a name=cite-wulderOpeningArchiveHow2012&gt;&lt;/a&gt;[Wulder, Masek, Cohen, Loveland, and Woodcock (2012)](#bib-wulderOpeningArchiveHow2012)
+- &lt;a name=cite-lovelandLandsatBuildingStrong2012&gt;&lt;/a&gt;([Loveland and Dwyer, 2012](#bib-lovelandLandsatBuildingStrong2012))
 
 - ([Loveland and Dwyer, 2012](#bib-lovelandLandsatBuildingStrong2012); [Wulder, Masek, Cohen et al., 2012](#bib-wulderOpeningArchiveHow2012))
 ---
@@ -683,19 +687,12 @@ Finally, to add a reference list use the following with the chunk with options `
 PrintBibliography(myBib, start = 1, end = 7)
 ```
 
-&lt;a
-name=bib-lovelandLandsatBuildingStrong2012&gt;&lt;/a&gt;[Loveland,
-T. R. and J. L.
-Dwyer](#cite-lovelandLandsatBuildingStrong2012) (2012).
-"Landsat: Building a Strong Future". In: _Remote Sensing
-of Environment_ 122, pp. 22-29.
+&lt;a name=bib-lovelandLandsatBuildingStrong2012&gt;&lt;/a&gt;[Loveland, T. R. and J. L. Dwyer](#cite-lovelandLandsatBuildingStrong2012)
+(2012). "Landsat: Building a Strong Future". In: _Remote Sensing of Environment_ 122, pp. 22-29.
 
-&lt;a name=bib-wulderOpeningArchiveHow2012&gt;&lt;/a&gt;[Wulder, M.
-A., J. G. Masek, W. B. Cohen, et
-al.](#cite-wulderOpeningArchiveHow2012) (2012). "Opening
-the Archive: How Free Data Has Enabled the Science and
-Monitoring Promise of Landsat". In: _Remote Sensing of
-Environment_ 122, pp. 2-10.
+&lt;a name=bib-wulderOpeningArchiveHow2012&gt;&lt;/a&gt;[Wulder, M. A., J. G. Masek, W. B. Cohen, et
+al.](#cite-wulderOpeningArchiveHow2012) (2012). "Opening the Archive: How Free Data Has Enabled the Science and Monitoring
+Promise of Landsat". In: _Remote Sensing of Environment_ 122, pp. 2-10.
 ---
 # Live preview of slides
 
@@ -789,20 +786,12 @@ names(xaringan:::list_css())
 ```
 
 ```
-##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
-##  [4] "default"          "duke-blue"        "fc-fonts"        
-##  [7] "fc"               "glasgow_template" "hygge-duke"      
-## [10] "hygge"            "ki-fonts"         "ki"              
-## [13] "kunoichi"         "lucy-fonts"       "lucy"            
-## [16] "metropolis-fonts" "metropolis"       "middlebury-fonts"
-## [19] "middlebury"       "nhsr-fonts"       "nhsr"            
-## [22] "ninjutsu"         "rladies-fonts"    "rladies"         
-## [25] "robot-fonts"      "robot"            "rutgers-fonts"   
-## [28] "rutgers"          "shinobi"          "tamu-fonts"      
-## [31] "tamu"             "uio-fonts"        "uio"             
-## [34] "uo-fonts"         "uo"               "uol-fonts"       
-## [37] "uol"              "useR-fonts"       "useR"            
-## [40] "uwm-fonts"        "uwm"
+##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"    "default"          "duke-blue"        "fc-fonts"         "fc"              
+##  [8] "glasgow_template" "hygge-duke"       "hygge"            "ki-fonts"         "ki"               "kunoichi"         "lucy-fonts"      
+## [15] "lucy"             "metropolis-fonts" "metropolis"       "middlebury-fonts" "middlebury"       "nhsr-fonts"       "nhsr"            
+## [22] "ninjutsu"         "rladies-fonts"    "rladies"          "robot-fonts"      "robot"            "rutgers-fonts"    "rutgers"         
+## [29] "shinobi"          "tamu-fonts"       "tamu"             "uio-fonts"        "uio"              "uo-fonts"         "uo"              
+## [36] "uol-fonts"        "uol"              "useR-fonts"       "useR"             "uwm-fonts"        "uwm"
 ```
 ---
 # Themes 2 
@@ -862,20 +851,36 @@ class: inverse, center, middle
 ---
 # Task
 
-30 minutes + homework of you creating a **small** 5 slide presentation
+30 minutes + homework
 
-* Select a sensor of your choice (any)
-* Create a short (maximum 5 slides) presentation on the sensor in xaringan
-* Things to consider
-  * Who runs the sensor
-  * What is the cost of the data 
-  * Where to source the data
-  * Resolutions (e.g. in a table)
-  * Applications of the data...with an example
-  * Images of the data (not required to download it)
-  * An example of the data being used within academic (or policy) literature 
+Create a small 5 slide (maximum) presentation and host it on GitHub - place the link in your Quarto portfolio
+
+-   Select a sensor of your choice (any)
+-   Create a short (maximum 5 slides) presentation on the sensor in xaringan
+
+Things to consider:
+
+-   Who runs the sensor
+-   What is the cost of the data
+-   Where do you source the data
+-   Resolutions (e.g. in a table)
+-   Applications of the data...with an example
+-   Images of the data (not required to download it)
+-   An example of the data being used within academic (or policy) literature
 
 To start with get xaringan working.
+
+---
+
+class: inverse, center, middle
+
+# 🙅‍♂ End of session 1
+
+---
+
+class: inverse, center, middle
+
+# 🚲 Start of session 2
 
 ---
 
@@ -1348,6 +1353,9 @@ p= h\frac{c}{\varrho}{#eq-example}
 `$$p= h\frac{c}{\varrho}$$` 
 * Then to reference figure in the text it's `@eq-example`
 
+You can also use $ to add a quick equation e.g. `$\rho$` gives `\(\rho\)`
+
+For more equation guidance consult [Mathematics in R Markdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html)
 ---
 
 # Citing in Quarto 
@@ -1394,6 +1402,24 @@ class: inverse, center, middle
 * In Quarto you can do all this in the visual editor! It makes it much easier.
 
 * Xaringan doesn't work with visual editor 
+
+---
+
+# Task
+
+30 minutes + homework
+
+For the individual assignment of the module you are required to produce a online portfolio of independent study and response questions. In the practical sessions this week you should have created your online portfolio and added your response from week 1 to it. For week 2 you must add the URL of your small 5 slide presentation and also write 1 paragraph on the following:
+
+-   Reflect on your experience using these reproducible presentation tools through considering the benefits and drawbacks.
+---
+
+class: inverse, center, middle
+
+# 🙅‍♂ End of session 2
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
