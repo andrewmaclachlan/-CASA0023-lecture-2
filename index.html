@@ -32,7 +32,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x23c6efb0e6d41c4a50bc6c7b85f8b60","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xe3115a870274a638af4006f5fed5976","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
     <script src="libs/editable/editable.js"></script>
@@ -192,7 +192,7 @@ class: inverse, center, middle
 class: inverse, center, middle
 
 
-# 🗣 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
+# 🙊 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
 ---
 class: inverse, center, middle
 
@@ -237,7 +237,7 @@ top:1em;right:2em;
 
 # Xaringan 
 
-* 🗣 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
+* 🙊 Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
 
 * Created by Yihui Xie....also created Bookdown...
 
@@ -653,6 +653,10 @@ BibOptions(check.entries = FALSE,
 myBib &lt;- ReadBib("./Bib.bib", check = FALSE)
 ```
 
+```
+## Loading required namespace: bibtex
+```
+
 ---
 
 # Citing 3
@@ -673,8 +677,8 @@ library(knitcitations)
 
 To create: 
 
-- [Wulder, Masek, Cohen, et al. (2012)](#bib-wulderOpeningArchiveHow2012)
-- ([Loveland and Dwyer, 2012](#bib-lovelandLandsatBuildingStrong2012))
+- &lt;a name=cite-wulderOpeningArchiveHow2012&gt;&lt;/a&gt;[Wulder, Masek, Cohen, Loveland, and Woodcock (2012)](#bib-wulderOpeningArchiveHow2012)
+- &lt;a name=cite-lovelandLandsatBuildingStrong2012&gt;&lt;/a&gt;([Loveland and Dwyer, 2012](#bib-lovelandLandsatBuildingStrong2012))
 
 - ([Loveland and Dwyer, 2012](#bib-lovelandLandsatBuildingStrong2012); [Wulder, Masek, Cohen, et al., 2012](#bib-wulderOpeningArchiveHow2012))
 ---
@@ -688,13 +692,16 @@ Finally, to add a reference list use the following with the chunk with options `
 PrintBibliography(myBib, start = 1, end = 7)
 ```
 
-&lt;a name=bib-lovelandLandsatBuildingStrong2012&gt;&lt;/a&gt;[Loveland, T. R. and J. L.
-Dwyer](#cite-lovelandLandsatBuildingStrong2012) (2012). "Landsat: Building a Strong Future". In: _Remote Sensing of
-Environment_ 122, pp. 22-29.
+&lt;a name=bib-lovelandLandsatBuildingStrong2012&gt;&lt;/a&gt;[Loveland, T. R. and
+J. L. Dwyer](#cite-lovelandLandsatBuildingStrong2012) (2012). "Landsat:
+Building a Strong Future". In: _Remote Sensing of Environment_ 122, pp.
+22-29.
 
-&lt;a name=bib-wulderOpeningArchiveHow2012&gt;&lt;/a&gt;[Wulder, M. A., J. G. Masek, W. B. Cohen, et
-al.](#cite-wulderOpeningArchiveHow2012) (2012). "Opening the Archive: How Free Data Has Enabled the Science and
-Monitoring Promise of Landsat". In: _Remote Sensing of Environment_ 122, pp. 2-10.
+&lt;a name=bib-wulderOpeningArchiveHow2012&gt;&lt;/a&gt;[Wulder, M. A., J. G.
+Masek, W. B. Cohen, et al.](#cite-wulderOpeningArchiveHow2012) (2012).
+"Opening the Archive: How Free Data Has Enabled the Science and
+Monitoring Promise of Landsat". In: _Remote Sensing of Environment_
+122, pp. 2-10.
 ---
 # Live preview of slides
 
@@ -788,14 +795,17 @@ names(xaringan:::list_css())
 ```
 
 ```
-##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"    "default"          "duke-blue"        "fc-fonts"        
-##  [7] "fc"               "glasgow_template" "hygge-duke"       "hygge"            "ki-fonts"         "ki"              
-## [13] "kunoichi"         "lucy-fonts"       "lucy"             "metropolis-fonts" "metropolis"       "middlebury-fonts"
-## [19] "middlebury"       "nhsr-fonts"       "nhsr"             "ninjutsu"         "rladies-fonts"    "rladies"         
-## [25] "robot-fonts"      "robot"            "rutgers-fonts"    "rutgers"          "shinobi"          "tamu-fonts"      
-## [31] "tamu"             "uio-fonts"        "uio"              "uo-fonts"         "uo"               "uol-fonts"       
-## [37] "uol"              "useR-fonts"       "useR"             "uwm-fonts"        "uwm"              "wic-fonts"       
-## [43] "wic"
+##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"    "default"         
+##  [5] "duke-blue"        "fc-fonts"         "fc"               "glasgow_template"
+##  [9] "hygge-duke"       "hygge"            "ki-fonts"         "ki"              
+## [13] "kunoichi"         "lucy-fonts"       "lucy"             "metropolis-fonts"
+## [17] "metropolis"       "middlebury-fonts" "middlebury"       "nhsr-fonts"      
+## [21] "nhsr"             "ninjutsu"         "rladies-fonts"    "rladies"         
+## [25] "robot-fonts"      "robot"            "rutgers-fonts"    "rutgers"         
+## [29] "shinobi"          "tamu-fonts"       "tamu"             "uio-fonts"       
+## [33] "uio"              "uo-fonts"         "uo"               "uol-fonts"       
+## [37] "uol"              "useR-fonts"       "useR"             "uwm-fonts"       
+## [41] "uwm"              "wic-fonts"        "wic"
 ```
 ---
 # Themes 2 
@@ -891,7 +901,7 @@ The presentation will be marked in the same manner set out in mark scheme for th
 
 class: inverse, center, middle
 
-# ✋ End of session 1
+# 🙅‍♂ End of session 1
 
 ---
 
@@ -1433,7 +1443,8 @@ For the individual assignment of the module you are required to produce a online
 
 class: inverse, center, middle
 
-# 🙅 End of session 2
+# ✋ End of session 2
+
 
 
 

@@ -1163,4 +1163,8 @@ class: inverse, center, middle
 # `r emo::ji("stop")` End of session 2
 
 
+```{r include=FALSE}
+library(xaringanBuilder)
+build_pdf("index.html", complex_slides = TRUE)
+```
 
