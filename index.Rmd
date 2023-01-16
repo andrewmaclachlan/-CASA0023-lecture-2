@@ -181,7 +181,9 @@ class: inverse, center, middle
 
 ```{r xaringan-logo, echo=FALSE}
 xaringanExtra::use_logo(
-  image_url = "img/casa_logo.jpg"
+  image_url = "img/casa_logo.jpg",
+  width = "50px",
+  position = xaringanExtra::css_position(top = "1em", right = "2em")
 )
 ```
 
@@ -684,22 +686,35 @@ class: inverse, center, middle
 
 30 minutes + homework
 
-Create a small 5 slide (maximum) presentation and host it on GitHub - place the link in your Quarto portfolio
+Create a small 5 slide presentation and host it on GitHub - place the link in your Quarto portfolio
 
 -   Select a sensor of your choice (any)
--   Create a short (maximum 5 slides) presentation on the sensor in xaringan
+-   Create a short (maximum 9 slide) presentation on the sensor in xaringan
 
-Things to consider:
+The presentation will be marked in the same manner set out in mark scheme for the learning diary. Specifically:
 
--   Who runs the sensor
--   What is the cost of the data
--   Where do you source the data
--   Resolutions (e.g. in a table)
--   Applications of the data...with an example
--   Images of the data (not required to download it)
--   An example of the data being used within academic (or policy) literature
+-   The summary criterion will refer to the summary of the sensor you have selected.
+-   The application criterion will refer to examples of studies that have used the data from the sensor and their purpose
+-   The reflection criterion will refer to what you have learnt in relation to the sensor, its use and how the data might be used in future work.
 
-To start with get xaringan working.
+---
+
+# Task 2 (after the next session this week)
+
+**On Thursday** 
+
+* There will be another short lecture
+* We will make our individual Quarto workbooks
+
+**Quarto workbook**
+
+* The production of the Quarto learning diary is not marked, but it is required for component 2. 
+
+* Once you have made your Quarto document update it with your learning diary entry from week 1, and the Xaringan presentation from week 2.
+
+* It is recommended you use chapters for each week and that you **do not** run the practical code in the learning diary
+
+* Have a separate project for you code and a separate project for your learning diary 
 
 ---
 
