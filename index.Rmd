@@ -172,6 +172,19 @@ class: inverse, center, middle
 
 # `r emo::ji("speak")` Xaringan = shar-in-gen or [ʃæ.ˈriŋ.gæn]..
 ---
+class: center, middle
+
+#  Xaringan = shar-in-gen
+
+```{r echo=FALSE, out.width='75%'}
+knitr::include_graphics('img/ninja.jpg')
+```
+
+.small[Strongest Sharingan of the List | Ninja World. [Source:Pintrest](https://www.pinterest.co.uk/pin/list-of-strongest-all-sharingan--599189925413641687/)
+]
+
+
+---
 class: inverse, center, middle
 
 
@@ -472,7 +485,7 @@ To export the library or collection
 
 1. Click keep updated
 
-1. Select the file to save into your Thesis project
+1. Select the file to save into your project
 
 ]
 ---
@@ -679,10 +692,33 @@ Resources:
 * [Sydney Xaringan theme](https://garthtarr.github.io/sydney_xaringan/#1)
 
 * [Alison Hill's Making slides in R Markdown](https://arm.rbind.io/slides/xaringan.html#1)
+
 ---
+class: center, middle
+
+# Add ons / useful resources 2
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vZMuu77ocMY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+class: center, middle
+
+# Extra info
+
+The slides are styled with **CSS** = Cascading Style Sheets, used to style web pages
+
+I almost exclusively use templates, but this video is helpful and will assist you with understanding how the slides are made.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XtUYXMLBthM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+---
+
 class: inverse, center, middle
 
 # Keep it simple 
+
+## Short example in R of slides, formatting and citing...
+
 ---
 # Task
 
