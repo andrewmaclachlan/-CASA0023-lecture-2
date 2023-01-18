@@ -1126,6 +1126,16 @@ Now the difficult files are out of the way.
 * See [Quarto cross referencing](https://quarto.org/docs/authoring/cross-references.html) for more info
 ---
 
+# Example
+
+```{r, eval=FALSE}
+![Elephant](elephant.png){#fig-elephant}
+
+See @fig-elephant for an illustration.
+```
+
+---
+
 # Equations
 
 ```{r, eval=FALSE}
@@ -1158,6 +1168,15 @@ When citing multiple authors use a ; [@xie2015; @maclachlan2017urban] = (Xie 201
 
 To remove the author add a minus sign `[-@maclachlan2017urban]` = (2017)
 ---
+# Citing example
+
+
+```{r echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics('img/citing_Quarto.png')
+```
+
+
+---
 
 class: inverse, center, middle
 
@@ -1174,6 +1193,33 @@ class: inverse, center, middle
 1. Save, stage changes, commit and then push to GitHub
 1. On your GitHub repository > settings > GitHub pages > select the source as main and the folder as docs
 1. Make sure you build your `gitbook`, if you don't and just save and commit it won't render online!
+
+---
+# Word and PDF
+
+Typically to export to word you need a word template...
+
+In terminal (in R)
+
+`$ quarto pandoc -o custom-reference-doc.docx \
+   --print-default-data-file reference.docx`
+   
+Then in the `_quarto.yml` add:
+
+See [Word Templates for customisation (e.g. headings and font)](https://quarto.org/docs/output-formats/ms-word-templates.html)
+
+```{r eval=FALSE}
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+  docx:
+    reference-doc: custom-reference-doc.docx
+```
+
+To export to PDF you need to run `quarto install tinytex` in the terminal in R..
+
 
 ---
 
@@ -1193,7 +1239,6 @@ class: inverse, center, middle
 
 For the individual assignment of the module you are required to produce a online portfolio of independent study and response questions. In the practical sessions this week you should have created your online portfolio and added your response from week 1 to it. For week 2 you must add the URL of your small 5 slide presentation and also write 1 paragraph on the following:
 
--   Reflect on your experience using these reproducible presentation tools through considering the benefits and drawbacks.
 ---
 
 class: inverse, center, middle
