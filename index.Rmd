@@ -727,7 +727,7 @@ class: inverse, center, middle
 Create a small 5 slide presentation and host it on GitHub - place the link in your Quarto portfolio
 
 -   Select a sensor of your choice (any)
--   Create a short (maximum 9 slide) presentation on the sensor in xaringan
+-   Create a short (maximum 9 slide, not including reference slide) presentation on the sensor in xaringan
 
 The presentation will **be marked in the same manner set out in mark scheme** for the learning diary. Specifically:
 
@@ -1237,7 +1237,7 @@ To export to PDF you need to run `quarto install tinytex` in the terminal in R..
 
 30 minutes + homework
 
-For the individual assignment of the module you are required to produce a online portfolio of independent study and response questions. In the practical sessions this week you should have created your online portfolio and added your response from week 1 to it. For week 2 you must add the URL of your small 5 slide presentation and also write 1 paragraph on the following:
+For the individual assignment of the module you are required to produce a online portfolio of independent study and response questions. In the practical sessions this week you should have created your online portfolio and added your response from week 1 to it. For week 2 you must add the URL of your small 9 slide presentation.
 
 ---
 
