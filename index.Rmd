@@ -1188,7 +1188,7 @@ class: inverse, center, middle
 
 * Don't mess around with the file structure
 
-1. Go to the `_quarto.yml` file and make sue that that you have this line of code: `output_dir: docs` (it should be there)
+1. Go to the `_quarto.yml` file and make sue that that you have this line of code: `output-dir: docs` (it should be there)
 1. Build your book locally, close the preview window
 1. Save, stage changes, commit and then push to GitHub
 1. On your GitHub repository > settings > GitHub pages > select the source as main and the folder as docs
