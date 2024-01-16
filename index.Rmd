@@ -463,7 +463,7 @@ A bit difficult in Xaringan, but Zotero can now continuously update your `.bib` 
 To do so:
 
 .pull-left[
-1. Download the latest release --- the `.xpi` file: https://github.com/retorquere/zotero-better-bibtex/releases/tag/v5.2.108
+1. Download the better-bibtex latest release --- the `.xpi` file: https://github.com/retorquere/zotero-better-bibtex/releases
 
 1. In Zotero > Tools > Add ons > Extensions 
 
@@ -720,6 +720,31 @@ class: inverse, center, middle
 ## Short example in R of slides, formatting and citing...
 
 ---
+
+# Quarto presentations 
+
+.pull-left[
+* Very similar **but less templates**
+
+* Much easier to reference as it is built in
+
+* Basic intro: https://quarto.org/docs/tools/rstudio.html
+
+* Some slides from Andy:
+  * [Code](https://github.com/andrewmaclachlan/digital-urban-hyderabad-lecture)
+  * [Slides](https://andrewmaclachlan.github.io/digital-urban-hyderabad-lecture/Pedagogic%20Challenges%202%20Urban%20Systems%20Science.html#/title-slide)
+]
+
+.pull-right[
+```{r echo=FALSE, out.width='50%', fig.align='center'}
+knitr::include_graphics('img/new-quarto-doc.png')
+```
+.small[Source:[R Quarto](https://quarto.org/docs/tools/rstudio.html)
+]
+
+---
+
+
 # Task
 
 30 minutes now + homework
