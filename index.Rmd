@@ -736,10 +736,11 @@ class: inverse, center, middle
 ]
 
 .pull-right[
-```{r echo=FALSE, out.width='50%', fig.align='center'}
+```{r echo=FALSE, out.width='75%', fig.align='center'}
 knitr::include_graphics('img/new-quarto-doc.png')
 ```
-.small[Source:[R Quarto](https://quarto.org/docs/tools/rstudio.html)
+.small[Source: [R Quarto](https://quarto.org/docs/tools/rstudio.html)
+]
 ]
 
 ---
