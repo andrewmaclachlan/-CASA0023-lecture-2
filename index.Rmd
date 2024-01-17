@@ -1154,11 +1154,29 @@ Now the difficult files are out of the way.
 
 # Example
 
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 ![Elephant](elephant.png){#fig-elephant}
 
 See @fig-elephant for an illustration.
 ```
+
+or...
+
+
+```{r, eval=FALSE}
+
+# start code chunk
+#| label: fig-plot
+#| fig-cap: "Plot"
+
+plot(cars)
+
+# end code chunk
+```
+
+For example, see @fig-plot.
+
+
 
 ---
 
