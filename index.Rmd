@@ -19,7 +19,7 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-```{r xaringan-all, echo=FALSE}
+```{r xaringan-all, echo=FALSE, warning=FALSE}
 library(countdown)
 library(xaringan)
 library(xaringanExtra)
@@ -147,7 +147,7 @@ knitr::include_graphics('img/Mariner-C Spacecraft Model.jpg')
 
 * A bit different....
 
-### Today
+### First part
 
 * 30 minutes of going through Xaringan
 * 30 minutes + homework of you creating a **small** presentation
@@ -155,10 +155,10 @@ knitr::include_graphics('img/Mariner-C Spacecraft Model.jpg')
 
 --
 
-### Thursday
+### Second part
 
 * 30 minutes of going through Quarto
-* 1 hour creating a Quarto site
+* 30 minutes + creating a Quarto site
 * This forms the template for the main assessment component of the module
 
 --
@@ -188,7 +188,7 @@ knitr::include_graphics('img/ninja.jpg')
 class: inverse, center, middle
 
 
-# A lot of the concepts covered today are the same for Quarto, which we cover later in the week 
+# A lot of the concepts covered today are the same for both Xaringan and Quarto
 
 ---
 
@@ -750,22 +750,22 @@ knitr::include_graphics('img/new-quarto-doc.png')
 
 30 minutes now + homework
 
-Create a small 5 slide presentation and host it on GitHub - place the link in your Quarto portfolio
+Create a small 5 slide presentation and host it on GitHub - place the link in your Quarto portfolio (that we will create later)
 
 -   Select a sensor of your choice (any)
 -   Create a short (maximum 9 slide, not including reference slide) presentation on the sensor in xaringan
 
 The presentation will **be marked in the same manner set out in mark scheme** for the learning diary. Specifically:
 
--   The **summary criterion** will refer to the summary of the sensor you have selected.
--   The **application criterion** will refer to examples of studies that have used the data from the sensor and their purpose
--   The **reflection criterion** will refer to what you have learnt in relation to the sensor, its use and how the data might be used in future work.
+-   The **summary criterion** will refer to the summary of the sensor you have selected.it will include independent thought 
+-   The **application criterion** will refer to and comment on examples of studies that have used the data from the sensor and their purpose
+-   The **reflection criterion** will refer to what you have learnt in relation to the sensor, its use and how the data might be used in future work/a broader context.
 
 ---
 
-# Task 2 (after the next session this week)
+# Task 2 (workshop)
 
-**On Thursday** 
+**In the next hour** 
 
 * There will be another short lecture
 * We will make our individual Quarto workbooks
@@ -829,7 +829,7 @@ class: inverse, center, middle
 
 # Quarto 
 
-Quarto was officially (?) released in 2022, just after I wrote all this in Bookdown
+Quarto was officially (?) released in 2022, just after I wrote all this in Bookdown. Now the workshop book is Quarto, slides Xaringan
 
 Quarto:
 
@@ -1281,7 +1281,18 @@ To export to PDF you need to run `quarto install tinytex` in the terminal in R..
 
 30 minutes + homework
 
-For the individual assignment of the module you are required to produce a online portfolio of independent study and response questions. In the practical sessions this week you should have created your online portfolio and added your response from week 1 to it. For week 2 you must add the URL of your small 9 slide presentation.
+For the individual assignment of the module you are required to produce a online portfolio of independent study and response questions. 
+
+In the practical sessions this week you should have created your online portfolio and added your response from week 1 to it. 
+
+For week 2 you must add the URL of your small 9 slide presentation.
+
+You can embed your Xaringan presentation into Quarto with
+
+```{r, eval=FALSE}
+xaringanExtra::embed_xaringan(url = "URL of your presentation",
+                              ratio = "16:9")
+```
 
 ---
 
@@ -1291,7 +1302,10 @@ class: inverse, center, middle
 
 
 ```{r include=FALSE}
-library(xaringanBuilder)
-build_pdf("index.html", complex_slides = TRUE)
+library(renderthis)
+# options(timeout = 300)
+# renderthis::to_pdf("index.Rmd")
+
+pagedown::chrome_print("index.html", timeout=600)
 ```
 
